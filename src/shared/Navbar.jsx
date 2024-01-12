@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <nav>
+      <nav className=" flex flex-col">
         <Link to="/">Home</Link>
         <Link to="popular">Popular</Link>
         <Link to="topRated">Top Rated</Link>
