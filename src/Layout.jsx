@@ -1,18 +1,13 @@
-import Navbar from "./shared/Navbar";
-import { Outlet } from "react-router-dom";
-//import Header from "./shared/Header";
+//import Navbar from "./shared/Navbar";
+//import { Outlet } from "react-router-dom";
+import Header from "./shared/Header";
 
 const Layout = () => {
   return (
     <>
-      <div className="relative text-white">
-        <div className="absolute inset-y-0 left-0 bg-background h-screen w-2/12 ">
-          <Navbar />
-        </div>
-        <div className="absolute inset-y-0 right-0 h-screen bg-background-light w-10/12">
-          <section>
-            <Outlet />
-          </section>
+      <div className=" bg-background">
+        <div>
+          <Header />
         </div>
       </div>
     </>
