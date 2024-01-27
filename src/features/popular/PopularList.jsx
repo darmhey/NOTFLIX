@@ -22,7 +22,7 @@ export const PopularList = () => {
 
   return (
     <>
-      <h2>Popular</h2>
+      <h2 className="text-white">Popular</h2>
       {/* {renderedList} */}
     </>
   );

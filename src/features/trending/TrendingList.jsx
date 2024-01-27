@@ -21,7 +21,7 @@ export const TrendingList = () => {
 
   return (
     <>
-      <h2>Trending Home</h2>
+      <h2 className="text-white">Trending Home</h2>
       {/* {renderedList} */}
     </>
   );

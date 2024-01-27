@@ -19,7 +19,7 @@ export const TopRatedList = () => {
   }, [topRatedListStatus, dispatch]);
   return (
     <>
-      <h2>Top Rated</h2>
+      <h2 className="text-white">Top Rated</h2>
       {/* {renderedList} */}
     </>
   );

@@ -14,7 +14,7 @@ const Layout = () => {
         <div className="absolute inset-y-0 left-0 bg-background h-screen w-2/12">
           <Navbar />
         </div>
-        <div className="absolute inset-y-0 right-0 h-screen bg-red-300 w-10/12">
+        <div className="absolute inset-y-0 right-0 h-screen bg-background-light w-10/12">
           <section>
             <Outlet />
           </section>

@@ -22,7 +22,7 @@ export const UpcomingList = () => {
 
   return (
     <>
-      <h2>Upcoming</h2>
+      <h2 className="text-white">Upcoming</h2>
       {/* {renderedList} */}
     </>
   );
