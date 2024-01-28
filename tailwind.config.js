@@ -14,6 +14,12 @@ export default {
         'neutral': '#D9DCF6',
         
       },
+      maxWidth: {
+        'xxxl': '90rem',
+      },
+      gridTemplateColumns: {
+        'template': 'minmax(0, 1fr) minmax(0, 90rem) minmax(0, 1fr)',
+      },
     },
   },
   

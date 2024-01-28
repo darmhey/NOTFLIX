@@ -10,11 +10,11 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className=" flex flex-col gap-2 ml-4 text-white ">
+      <nav className="flex flex-col gap-2 ml-4 text-white ">
         <Link onClick={() => setActive(0)} to="/">
           <div
             aria-selected={active === 0 ? "true" : "false"}
-            className="flex flex-row gap-4  aria-selected:bg-background-light py-2 rounded-l"
+            className="flex flex-row gap-4  aria-selected:bg-background-light py-2 rounded-l hover:bg-background-light"
           >
             <img src={home} alt="" />
             <h3>Home</h3>
@@ -24,7 +24,7 @@ const Navbar = () => {
           <div
             onClick={() => setActive(1)}
             aria-selected={active === 1 ? "true" : "false"}
-            className="flex flex-row gap-4 aria-selected:bg-background-light py-2 rounded-l"
+            className="flex flex-row gap-4 aria-selected:bg-background-light py-2 rounded-l hover:bg-background-light"
           >
             <img src={popular} alt="" />
             <h3>Popular</h3>
@@ -34,7 +34,7 @@ const Navbar = () => {
           <div
             onClick={() => setActive(2)}
             aria-selected={active === 2 ? "true" : "false"}
-            className="flex flex-row gap-4 aria-selected:bg-background-light py-2 rounded-l"
+            className="flex flex-row gap-4 aria-selected:bg-background-light py-2 rounded-l hover:bg-background-light"
           >
             <img src={toprated} alt="" />
             <h3>Top Rated</h3>
@@ -44,7 +44,7 @@ const Navbar = () => {
           <div
             onClick={() => setActive(3)}
             aria-selected={active === 3 ? "true" : "false"}
-            className="flex flex-row gap-4 aria-selected:bg-background-light py-2 rounded-l"
+            className="flex flex-row gap-4 aria-selected:bg-background-light py-2 rounded-l hover:bg-background-light"
           >
             <img src={upcoming} alt="" />
             <h3>Upcoming</h3>
