@@ -11,10 +11,10 @@ const Layout = () => {
             <Header />
           </div>
           <div className="relative">
-            <div className="absolute inset-y-0 left-0 bg-background lg:h-screen lg:w-2/12">
+            <div className="absolute inset-y-0 left-0 bg-background lg:h-screen w-2/12">
               <Navbar />
             </div>
-            <div className="absolute inset-y-0 right-0 lg:h-screen bg-background-light lg:w-10/12">
+            <div className="absolute inset-y-0 right-0 h-screen bg-background-light w-10/12">
               <section>
                 <Outlet />
               </section>
