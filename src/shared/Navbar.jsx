@@ -16,8 +16,8 @@ const Navbar = () => {
             aria-selected={active === 0 ? "true" : "false"}
             className="flex flex-row gap-2  aria-selected:bg-background-light py-2 rounded-l hover:bg-background-light"
           >
-            <img className="md:h-4 md:w-4 h-6 w-6" src={home} alt="" />
-            <h3 className=" md:text-sm">Home</h3>
+            <img className="h-4 w-4 " src={home} alt="" />
+            <h3 className=" text-sm">Home</h3>
           </div>
         </Link>
         <Link to="popular">
@@ -26,8 +26,8 @@ const Navbar = () => {
             aria-selected={active === 1 ? "true" : "false"}
             className="flex flex-row gap-2 aria-selected:bg-background-light py-2 rounded-l hover:bg-background-light"
           >
-            <img className="md:h-4 md:w-4 h-6 w-6" src={popular} alt="" />
-            <h3 className=" md:text-sm">Popular</h3>
+            <img className="h-4 w-4 " src={popular} alt="" />
+            <h3 className=" text-sm">Popular</h3>
           </div>
         </Link>
         <Link to="topRated">
@@ -36,8 +36,8 @@ const Navbar = () => {
             aria-selected={active === 2 ? "true" : "false"}
             className="flex flex-row gap-2 aria-selected:bg-background-light py-2 rounded-l hover:bg-background-light"
           >
-            <img className="md:h-4 md:w-4 h-6 w-6" src={toprated} alt="" />
-            <h3 className=" md:text-sm">Top Rated</h3>
+            <img className="h-4 w-4 " src={toprated} alt="" />
+            <h3 className=" text-sm">Top Rated</h3>
           </div>
         </Link>
         <Link to="upcoming">
@@ -46,8 +46,8 @@ const Navbar = () => {
             aria-selected={active === 3 ? "true" : "false"}
             className="flex flex-row gap-2 aria-selected:bg-background-light py-2 rounded-l hover:bg-background-light"
           >
-            <img className="md:h-4 md:w-4 h-6 w-6" src={upcoming} alt="" />
-            <h3 className=" md:text-sm">Upcoming</h3>
+            <img className="h-4 w-4 " src={upcoming} alt="" />
+            <h3 className=" text-sm">Upcoming</h3>
           </div>
         </Link>
       </nav>
