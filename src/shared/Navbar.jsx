@@ -14,40 +14,40 @@ const Navbar = () => {
         <Link onClick={() => setActive(0)} to="/">
           <div
             aria-selected={active === 0 ? "true" : "false"}
-            className="flex flex-row gap-2  aria-selected:bg-background-light py-2 rounded-l hover:bg-background-light"
+            className="flex flex-row gap-2 lg:gap-4  aria-selected:bg-background-light py-2 rounded-l hover:bg-background-light"
           >
-            <img className="h-4 w-4 " src={home} alt="" />
-            <h3 className=" text-sm">Home</h3>
+            <img className="h-4 w-4 lg:h-6 lg:w-6 " src={home} alt="" />
+            <h3 className=" text-sm lg:text-base">Home</h3>
           </div>
         </Link>
         <Link to="popular">
           <div
             onClick={() => setActive(1)}
             aria-selected={active === 1 ? "true" : "false"}
-            className="flex flex-row gap-2 aria-selected:bg-background-light py-2 rounded-l hover:bg-background-light"
+            className="flex flex-row gap-2 lg:gap-4  aria-selected:bg-background-light py-2 rounded-l hover:bg-background-light"
           >
-            <img className="h-4 w-4 " src={popular} alt="" />
-            <h3 className=" text-sm">Popular</h3>
+            <img className="h-4 w-4 lg:h-6 lg:w-6 " src={popular} alt="" />
+            <h3 className=" text-sm lg:text-base">Popular</h3>
           </div>
         </Link>
         <Link to="topRated">
           <div
             onClick={() => setActive(2)}
             aria-selected={active === 2 ? "true" : "false"}
-            className="flex flex-row gap-2 aria-selected:bg-background-light py-2 rounded-l hover:bg-background-light"
+            className="flex flex-row gap-2 lg:gap-4  aria-selected:bg-background-light py-2 rounded-l hover:bg-background-light"
           >
-            <img className="h-4 w-4 " src={toprated} alt="" />
-            <h3 className=" text-sm">Top Rated</h3>
+            <img className="h-4 w-4 lg:h-6 lg:w-6 " src={toprated} alt="" />
+            <h3 className=" text-sm lg:text-base">Top Rated</h3>
           </div>
         </Link>
         <Link to="upcoming">
           <div
             onClick={() => setActive(3)}
             aria-selected={active === 3 ? "true" : "false"}
-            className="flex flex-row gap-2 aria-selected:bg-background-light py-2 rounded-l hover:bg-background-light"
+            className="flex flex-row gap-2 lg:gap-4  aria-selected:bg-background-light py-2 rounded-l hover:bg-background-light"
           >
-            <img className="h-4 w-4 " src={upcoming} alt="" />
-            <h3 className=" text-sm">Upcoming</h3>
+            <img className="h-4 w-4 lg:h-6 lg:w-6 " src={upcoming} alt="" />
+            <h3 className=" text-sm lg:text-base">Upcoming</h3>
           </div>
         </Link>
       </nav>
