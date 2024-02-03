@@ -40,5 +40,5 @@ const upcomingSlice = createSlice({
       });
   },
 });
-
+export const selectUpcoming = (state) => state.upcoming.posts;
 export default upcomingSlice.reducer;

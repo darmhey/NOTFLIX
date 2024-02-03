@@ -7,7 +7,7 @@ const Header = () => {
       <div className="flex flex-row items-center sm:gap-4 sm:p-4 p-4 gap-2 ">
         <div className="flex flex-row items-center gap-4">
           <img className=" h-6 w-6" src={Logo} alt="Notflix logo" />
-          <h1 className="font-bold text-accent uppercase">Notflix</h1>
+          <h1 className="font-bold text-white uppercase">Notflix</h1>
         </div>
 
         <label className="relative  md:pl-16 lg:pl-32 hidden sm:block">

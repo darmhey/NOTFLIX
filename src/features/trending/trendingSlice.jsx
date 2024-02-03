@@ -40,5 +40,5 @@ const trendingSlice = createSlice({
   },
 });
 
-export const selectTrending = (state) => state.trending;
+export const selectTrending = (state) => state.trending.posts;
 export default trendingSlice.reducer;

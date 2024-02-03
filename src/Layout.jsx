@@ -33,7 +33,7 @@ const Layout = () => {
           <div className="sm:relative">
             <div
               aria-selected={isMenuOpen}
-              className="absolute inset-y-0 right-0 left-1/4 pt-10 sm:pt-0 z-30 sm:absolute sm:inset-y-0 sm:left-0 bg-background-light sm:bg-background sm:h-screen sm:w-2/12 aria-selected:transition-[translate] ease-in-out duration-300 aria-selected:translate-x-0 translate-x-full  sm:translate-x-0"
+              className="absolute inset-y-0 right-0 left-1/4 pt-10 sm:pt-0 z-30 sm:absolute sm:inset-y-0 sm:left-0 bg-background-light sm:bg-background sm:h-screen sm:w-2/12 ease-in-out duration-300 aria-selected:translate-x-0 translate-x-full  sm:translate-x-0"
             >
               <Navbar />
             </div>

@@ -26,7 +26,6 @@ const popularSlice = createSlice({
       })
       .addCase(fetchPopularData.fulfilled, (state, action) => {
         state.status = "succeeded";
-        //state.posts = state.posts.concat(action.payload);
         state.posts = action.payload;
         console.log("succeeded");
         console.log(state.posts);
@@ -40,6 +39,8 @@ const popularSlice = createSlice({
   },
 });
 
-export const selectPopularList = (state) => state.popular;
+export const selectPopularList = (state) => state.popular.posts;
+// export const selectPopularById = (state, postId) =>
+//   state.posts.find(post => post.id === postId)
 
 export default popularSlice.reducer;

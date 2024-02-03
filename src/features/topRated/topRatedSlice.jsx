@@ -40,6 +40,6 @@ const topRatedSlice = createSlice({
   },
 });
 
-export const selectTopRatedList = (state) => state.topRated;
+export const selectTopRatedList = (state) => state.topRated.posts;
 
 export default topRatedSlice.reducer;
