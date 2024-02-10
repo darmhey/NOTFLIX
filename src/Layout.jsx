@@ -37,7 +37,7 @@ const Layout = () => {
             >
               <Navbar />
             </div>
-            <div className="sm:absolute sm:inset-y-0 sm:right-0 sm:h-screen bg-background-light sm:w-10/12">
+            <div className="sm:absolute sm:inset-y-0 sm:right-0 min-h-fit bg-background-light sm:w-10/12">
               <section>
                 <Outlet />
               </section>
