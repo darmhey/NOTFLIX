@@ -10,6 +10,7 @@ export default {
       colors: {
         'background': '#0E1623',
         'background-light': '#1F2937',
+        'background-light-2': '#7C8189',
         'accent': '#808CF8',
         'neutral': '#D9DCF6',
         

@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchPopularData, selectPopularList } from "./popularSlice";
 import { useEffect } from "react";
 import MovieCard from "../../components/MovieCard";
+import Loading from "../../components/Loading";
 
 export const PopularList = () => {
   const popularList = useSelector(selectPopularList);
@@ -24,13 +25,20 @@ export const PopularList = () => {
     />
   ));
 
+  const renderThis = () =>
+    popularListStatus === "loading" ? (
+      <Loading />
+    ) : popularListStatus === "succeeded" ? (
+      renderedList
+    ) : null;
+
   return (
     <>
       <h2 className="text-white p-4 text-lg font-bold uppercase">
         Popular Movies
       </h2>
       <div className="grid  grid-cols-list gap-8 place-content-center px-3">
-        {renderedList}
+        {renderThis()}
       </div>
     </>
   );

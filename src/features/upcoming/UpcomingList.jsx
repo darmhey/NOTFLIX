@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchUpcomingData, selectUpcoming } from "./upcomingSlice";
 import { useEffect } from "react";
 import MovieCard from "../../components/MovieCard";
+import Loading from "../../components/Loading";
 
 export const UpcomingList = () => {
   const upcomingList = useSelector(selectUpcoming);
@@ -24,13 +25,20 @@ export const UpcomingList = () => {
     />
   ));
 
+  const renderThis = () =>
+    upcomingListStatus === "loading" ? (
+      <Loading />
+    ) : upcomingListStatus === "succeeded" ? (
+      renderedList
+    ) : null;
+
   return (
     <>
       <h2 className="text-white p-4 text-lg font-bold uppercase">
         Upcoming Movies
       </h2>
       <div className="grid  grid-cols-list gap-8 place-content-center px-3">
-        {renderedList}
+        {renderThis()}
       </div>
     </>
   );

@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchTopRatedData, selectTopRatedList } from "./topRatedSlice";
 import { useEffect } from "react";
 import MovieCard from "../../components/MovieCard";
+import Loading from "../../components/Loading";
 
 export const TopRatedList = () => {
   const topRatedList = useSelector(selectTopRatedList);
@@ -22,6 +23,12 @@ export const TopRatedList = () => {
       posterPath={item.poster_path}
     />
   ));
+  const renderThis = () =>
+    topRatedListStatus === "loading" ? (
+      <Loading />
+    ) : topRatedListStatus === "succeeded" ? (
+      renderedList
+    ) : null;
 
   return (
     <>
@@ -29,7 +36,7 @@ export const TopRatedList = () => {
         Top Rated Movies
       </h2>
       <div className="grid  grid-cols-list gap-8 place-content-center px-3">
-        {renderedList}
+        {renderThis()}
       </div>
     </>
   );

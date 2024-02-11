@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchTrendingData, selectTrending } from "./trendingSlice";
 import { useEffect } from "react";
 import MovieCard from "../../components/MovieCard";
+import Loading from "../../components/Loading";
 
 export const TrendingList = () => {
   const trendingList = useSelector(selectTrending);
@@ -23,13 +24,20 @@ export const TrendingList = () => {
     />
   ));
 
+  const renderThis = () =>
+    trendingListStatus === "loading" ? (
+      <Loading />
+    ) : trendingListStatus === "succeeded" ? (
+      renderedList
+    ) : null;
+
   return (
     <>
       <h2 className="text-white p-4 text-lg font-bold uppercase">
         Discover Movies
       </h2>
       <div className="grid  grid-cols-list gap-8 place-content-center px-3">
-        {renderedList}
+        {renderThis()}
       </div>
     </>
   );
