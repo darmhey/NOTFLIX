@@ -26,7 +26,7 @@ export const TrendingList = () => {
   return (
     <>
       <h2 className="text-white p-4 text-lg font-bold uppercase">
-        Trending Home
+        Discover Movies
       </h2>
       <div className="grid  grid-cols-list gap-8 place-content-center px-3">
         {renderedList}
@@ -34,26 +34,3 @@ export const TrendingList = () => {
     </>
   );
 };
-
-// <div className="text-black grid gap-4 grid-cols-test place-content-center">
-//         <div className=" aspect-card bg-red-200">1</div>
-//         <div className=" aspect-card bg-red-200">2</div>
-//         <div className=" aspect-card bg-red-200">3</div>
-//         <div className=" aspect-card bg-red-200">4</div>
-//         <div className=" aspect-card bg-red-200">5</div>
-//         <div className=" aspect-card bg-red-200">6</div>
-//         <div className=" aspect-card bg-red-200">7</div>
-//         <div className=" aspect-card bg-red-200">8</div>
-//         <div className=" aspect-card bg-red-200">9</div>
-//         <div className=" aspect-card bg-red-200">10</div>
-//         <div className=" aspect-card bg-red-200">1</div>
-//         <div className=" aspect-card bg-red-200">2</div>
-//         <div className=" aspect-card bg-red-200">3</div>
-//         <div className=" aspect-card bg-red-200">4</div>
-//         <div className=" aspect-card bg-red-200">5</div>
-//         <div className=" aspect-card bg-red-200">6</div>
-//         <div className=" aspect-card bg-red-200">7</div>
-//         <div className=" aspect-card bg-red-200">8</div>
-//         <div className=" aspect-card bg-red-200">9</div>
-//         <div className=" aspect-card bg-red-200">10</div>
-//       </div>

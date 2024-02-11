@@ -4,15 +4,15 @@ function MovieCard(props) {
   const imageUrl = `${baseUrl}${props.posterPath}`;
   return (
     <>
-      <div>
+      <div className=" border border-gray-700">
         <img
           className="aspect-card w-full rounded-t-md"
           src={imageUrl}
           alt="movie-poster"
         />
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-1 py-2 ">
           <h1 className="text-white font-bold ">{props.title}</h1>
-          <h1 className="text-white">{props.releaseDate}</h1>
+          <h1 className="text-white font-thin text-sm">{props.releaseDate}</h1>
         </div>
       </div>
     </>

@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { fetchPopularData, selectPopularList } from "./popularSlice";
 import { useEffect } from "react";
+import MovieCard from "../../components/MovieCard";
 
 export const PopularList = () => {
   const popularList = useSelector(selectPopularList);
@@ -15,17 +16,22 @@ export const PopularList = () => {
   }, [popularListStatus, dispatch]);
 
   const renderedList = popularList.map((item) => (
-    <section className="text-white" key={item.id}>
-      <h3>{item.title}</h3>
-    </section>
+    <MovieCard
+      key={item.id}
+      title={item.title}
+      releaseDate={item.release_date}
+      posterPath={item.poster_path}
+    />
   ));
 
   return (
     <>
-      <h1 className="text-white p-4 text-lg font-bold uppercase">
-        Popular Movies
-      </h1>
-      {renderedList}
+      <h2 className="text-white p-4 text-lg font-bold uppercase">
+        Discover Movies
+      </h2>
+      <div className="grid  grid-cols-list gap-8 place-content-center px-3">
+        {renderedList}
+      </div>
     </>
   );
 };

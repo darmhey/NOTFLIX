@@ -13,7 +13,7 @@ const Layout = () => {
 
   return (
     <>
-      <div className=" lg:mx-auto lg:grid lg:grid-cols-template bg-background ">
+      <div className=" lg:mx-auto lg:grid lg:grid-cols-template mb-2 bg-background ">
         <div
           aria-selected={isMenuOpen}
           onClick={toggleMenu}
