@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { fetchTopRatedData, selectTopRatedList } from "./topRatedSlice";
 import { useEffect } from "react";
+import MovieCard from "../../components/MovieCard";
 
 export const TopRatedList = () => {
   const topRatedList = useSelector(selectTopRatedList);
@@ -14,14 +15,22 @@ export const TopRatedList = () => {
   }, [topRatedListStatus, dispatch]);
 
   const renderedList = topRatedList.map((item) => (
-    <section className="text-white" key={item.id}>
-      <h3>{item.title}</h3>
-    </section>
+    <MovieCard
+      key={item.id}
+      title={item.title}
+      releaseDate={item.release_date}
+      posterPath={item.poster_path}
+    />
   ));
+
   return (
     <>
-      <h2 className="text-white p-4 text-lg font-bold uppercase">Top Rated</h2>
-      {renderedList}
+      <h2 className="text-white p-4 text-lg font-bold uppercase">
+        Top Rated Movies
+      </h2>
+      <div className="grid  grid-cols-list gap-8 place-content-center px-3">
+        {renderedList}
+      </div>
     </>
   );
 };

@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { fetchUpcomingData, selectUpcoming } from "./upcomingSlice";
 import { useEffect } from "react";
+import MovieCard from "../../components/MovieCard";
 
 export const UpcomingList = () => {
   const upcomingList = useSelector(selectUpcoming);
@@ -15,15 +16,22 @@ export const UpcomingList = () => {
   }, [upcomingListStatus, dispatch]);
 
   const renderedList = upcomingList.map((item) => (
-    <section className="text-white" key={item.id}>
-      <h3>{item.title}</h3>
-    </section>
+    <MovieCard
+      key={item.id}
+      title={item.title}
+      releaseDate={item.release_date}
+      posterPath={item.poster_path}
+    />
   ));
 
   return (
     <>
-      <h2 className="text-white p-4 text-lg font-bold uppercase">Upcoming</h2>
-      {renderedList}
+      <h2 className="text-white p-4 text-lg font-bold uppercase">
+        Upcoming Movies
+      </h2>
+      <div className="grid  grid-cols-list gap-8 place-content-center px-3">
+        {renderedList}
+      </div>
     </>
   );
 };

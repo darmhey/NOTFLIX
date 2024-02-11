@@ -27,7 +27,7 @@ export const PopularList = () => {
   return (
     <>
       <h2 className="text-white p-4 text-lg font-bold uppercase">
-        Discover Movies
+        Popular Movies
       </h2>
       <div className="grid  grid-cols-list gap-8 place-content-center px-3">
         {renderedList}
