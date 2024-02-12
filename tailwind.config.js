@@ -21,6 +21,7 @@ export default {
       gridTemplateColumns: {
         'template': 'minmax(0, 1fr) minmax(0, 90rem) minmax(0, 1fr)',
         'list': 'repeat(auto-fill, 12rem)',
+        'list-1': 'repeat(auto-fill, 140px)',
       },
       aspectRatio: {
         'card': '3 / 5',

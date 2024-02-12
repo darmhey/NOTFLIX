@@ -37,7 +37,7 @@ export const UpcomingList = () => {
       <h2 className="text-white p-4 text-lg font-bold uppercase">
         Upcoming Movies
       </h2>
-      <div className="grid  grid-cols-list gap-8 place-content-center px-3">
+      <div className="grid grid-cols-list-1 sm:grid-cols-list gap-8 place-content-center px-3">
         {renderThis()}
       </div>
     </>
