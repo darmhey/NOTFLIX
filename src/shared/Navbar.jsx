@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { ActiveContext } from "../Layout";
+import { useContext } from "react";
+
 import { Link } from "react-router-dom";
 import home from "../assets/home.svg";
 import popular from "../assets/popular.svg";
 import upcoming from "../assets/upcoming.svg";
 import toprated from "../assets/toprated.svg";
 
+// eslint-disable-next-line react/prop-types
 const Navbar = () => {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useContext(ActiveContext);
 
   return (
     <>

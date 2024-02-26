@@ -1,6 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
 import { fetchTrendingData, selectTrending } from "./trendingSlice";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import MovieCard from "../../components/MovieCard";
 import Loading from "../../components/Loading";
 
@@ -16,12 +18,14 @@ export const TrendingList = () => {
   }, [trendingListStatus, dispatch]);
 
   const renderedList = trendingList.map((item) => (
-    <MovieCard
-      key={item.id}
-      title={item.title}
-      releaseDate={item.release_date}
-      posterPath={item.poster_path}
-    />
+    <Link key={item.id} to={`/upcoming/${item.id}`}>
+      <MovieCard
+        key={item.id}
+        title={item.title}
+        releaseDate={item.release_date}
+        posterPath={item.poster_path}
+      />
+    </Link>
   ));
 
   const renderThis = () =>

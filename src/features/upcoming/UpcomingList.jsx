@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { fetchUpcomingData, selectUpcoming } from "./upcomingSlice";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import MovieCard from "../../components/MovieCard";
 import Loading from "../../components/Loading";
 
@@ -17,12 +18,13 @@ export const UpcomingList = () => {
   }, [upcomingListStatus, dispatch]);
 
   const renderedList = upcomingList.map((item) => (
-    <MovieCard
-      key={item.id}
-      title={item.title}
-      releaseDate={item.release_date}
-      posterPath={item.poster_path}
-    />
+    <Link key={item.id} to={`/upcoming/${item.id}`}>
+      <MovieCard
+        title={item.title}
+        releaseDate={item.release_date}
+        posterPath={item.poster_path}
+      />
+    </Link>
   ));
 
   const renderThis = () =>

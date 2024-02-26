@@ -5,14 +5,17 @@ function MovieCard(props) {
   return (
     <>
       <div className=" border border-gray-700">
-        <img
-          className="aspect-card w-full rounded-t-md"
-          src={imageUrl}
-          alt="movie-poster"
-        />
-        <div className="flex flex-col gap-1 py-2 ">
+        <div className=" border-4 border-white">
+          <img
+            className="aspect-card w-full rounded-t-md"
+            src={imageUrl}
+            alt="movie-poster"
+          />
+        </div>
+
+        <div className="flex flex-col gap-1 py-2 pl-2 ">
           <h1 className="text-white font-bold ">{props.title}</h1>
-          <h1 className="text-white font-thin text-sm">{props.releaseDate}</h1>
+          <h1 className="text-white font-light text-xs">{props.releaseDate}</h1>
         </div>
       </div>
     </>

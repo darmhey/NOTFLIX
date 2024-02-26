@@ -1,6 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
 import { fetchPopularData, selectPopularList } from "./popularSlice";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import MovieCard from "../../components/MovieCard";
 import Loading from "../../components/Loading";
 
@@ -17,12 +19,14 @@ export const PopularList = () => {
   }, [popularListStatus, dispatch]);
 
   const renderedList = popularList.map((item) => (
-    <MovieCard
-      key={item.id}
-      title={item.title}
-      releaseDate={item.release_date}
-      posterPath={item.poster_path}
-    />
+    <Link key={item.id} to={`/popular/${item.id}`}>
+      <MovieCard
+        key={item.id}
+        title={item.title}
+        releaseDate={item.release_date}
+        posterPath={item.poster_path}
+      />
+    </Link>
   ));
 
   const renderThis = () =>
